@@ -1,0 +1,72 @@
+/* From Uiverse.io by ahmed150up2 */ 
+.card {
+  display: flex;
+	justify-content: center;
+  height: 70px;
+  width: 270px;
+	margin:0 auto;
+	padding: 0px;
+}
+
+.card svg {
+  position: absolute;
+  display: flex;
+  width: 60%;
+  height: 100%;
+  font-size: 24px;
+  font-weight: 700;
+  opacity: 1;
+  transition: opacity 0.25s;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.card .socialLink,.card .socialLink2,.card .socialLink3,.card .socialLink4 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  color: whitesmoke;
+  font-size: 24px;
+  text-decoration: none;
+  transition: 0.25s;
+  border-radius: 50px;
+}
+
+.card svg {
+  transform: scale(1);
+}
+
+.card .socialLink:hover {
+  background-color: transparent;
+  animation: bounce_613 0.4s linear;
+}
+
+.card .socialLink2:hover {
+  background-color: transparent;
+  animation: bounce_613 0.4s linear;
+}
+
+.card .socialLink3:hover {
+  background-color: transparent;
+  animation: bounce_613 0.4s linear;
+}
+
+@keyframes bounce_613 {
+  40% {
+    transform: scale(1.4);
+  }
+
+  60% {
+    transform: scale(0.8);
+  }
+
+  80% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

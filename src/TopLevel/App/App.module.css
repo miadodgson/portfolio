@@ -1,0 +1,52 @@
+.app{
+    text-align:center;
+	display:flex;
+	flex-direction: column;
+	max-width:100%;
+	max-height:100%;
+	height: calc(100% - var(--bg));
+	border: blue 1px solid;
+	margin:0px;
+}
+
+.header {
+	width:flex;
+	height:60px;
+	padding:0px;
+	font-size:25px;
+	font-weight: 100;
+	font-family:sans-serif;
+	text-align: center;
+	margin:0 0 0 0;
+	display: flex;
+	justify-content: space-between;
+	background-color:  var(--bg);
+	border: rgb(51, 240, 76) 10px solid;
+}
+
+
+
+hr {
+    border: 0;
+    height:0.4px;
+	width:75%;
+	background:white;
+	margin-right:-2px;
+	margin-left:20px;
+	margin-top: 20px;
+    margin: 20px 10;
+	align-content: center;
+	flex: flex;
+	line-height:0%;
+}
+
+
+.h1 {
+	text-align: center;
+	color:white;
+	font-size: 18px;
+	position:relative;
+	margin:0px;
+}
+
+
