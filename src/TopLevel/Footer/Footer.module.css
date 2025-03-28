@@ -1,0 +1,28 @@
+.footer{
+	text-align: center;
+	border-bottom: 0;
+	margin: 0;
+	position:absolute;
+	bottom:0;
+	line-height:20px;
+	padding:0px;
+	width:100%;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px yellow solid;
+}
+
+.h1 {
+	color:white;
+	font-size:20px;
+	font-family:sans-serif;
+	font-weight: 100;
+}
+
+.icon {
+	height:24px;
+	width:24px;
+	margin-left: 10px;
+	}

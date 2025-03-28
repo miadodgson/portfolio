@@ -1,0 +1,23 @@
+.header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	text-align: center;
+	z-index: 1000;
+	height: var(--Header-size, 80px);
+	justify-content: space-between;
+	box-sizing: border-box;
+	border: palevioletred 1px solid; 
+	display: flex;
+}
+
+.loader {
+  	display: inline-block; 
+  	position: relative;
+ 	margin-top: 8px;
+	margin-left: 10px;
+	height: 40px;
+}
