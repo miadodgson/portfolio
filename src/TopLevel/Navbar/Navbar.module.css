@@ -19,13 +19,12 @@ a {
 
 .navbar {
   height: var(--Header-size);
-	width: 40%;
+	width: 10%;
   background-color: var(--bg);
   padding: 0;
 	display:flex;
 	justify-content: flex-end;
 	position: relative;
-  /* border: #0935b8 1px solid; */
 }
 
 /* <ul> */
@@ -46,11 +45,11 @@ a {
 
 .navButton {
   --button-size: calc(var(--nav-size) * 0.65);
-  width: var(--button-size);
+  width: 60px;
   height: var(--button-size);
   padding: 5px;
   margin: 2px;
-	margin-right: 10px;
+	margin-right: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
