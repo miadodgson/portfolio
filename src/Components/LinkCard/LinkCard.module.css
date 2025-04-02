@@ -1,0 +1,62 @@
+/* styles/Welcome.module.css */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #1f2937;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2d3748;
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    width: 320px;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  .text {
+    margin-bottom: 16px;
+  }
+  
+  .iconContainer {
+    display: flex;
+    gap: 16px;
+  }
+  
+  .icon img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.2s;
+  }
+  
+  .icon img:hover {
+    transform: scale(1.1);
+  }
+  
+  .closeButton {
+    margin-top: 16px;
+    background: linear-gradient(to right, #3b82f6, #ec4899);
+    color: white;
+    font-weight: bold;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+  }
+  
+  .closeButton:hover {
+    opacity: 0.8;
+  }
