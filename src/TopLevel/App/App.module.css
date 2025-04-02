@@ -13,7 +13,6 @@
 	height: calc(100% -var(--bg));
 	flex: 1; 
 	justify-content: flex-start;
-	border: pink 1px solid;
   }
 
 hr {
