@@ -1,0 +1,26 @@
+/* From Uiverse.io by artvelog */ 
+.container {
+    width: 100%;
+    height: 250px;
+    width: 350px;
+    background: #f1f1f1;
+    background-image: linear-gradient(
+        90deg,
+        transparent 40px, 
+        #ffb4b8 38px, 
+        #ffb4b8 42px,
+        transparent 42px
+      ),
+      linear-gradient(#e1e1e1 0.1em, transparent 0.1em);
+    background-size: 100% 40px;
+    z-index: 100;
+    opacity: 0.85; 
+    border-radius: 15px; 
+}
+.title {
+    color: rgb(33, 33, 33);
+    font-size: 30px;
+    padding-top: 9px;
+    margin-left: 20px;
+    line-height: 39px;
+}
