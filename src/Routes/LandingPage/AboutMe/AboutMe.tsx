@@ -15,8 +15,6 @@ const AboutMe: React.FC = () => {
 				<Looseleaf />
 				<div className={styles.box}>Column 1
 				</div>
-				<div className={styles.box}>Column 2		
-				</div>
 			</div>
 		</div>
 	);
