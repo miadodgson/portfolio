@@ -1,26 +1,42 @@
-/* From Uiverse.io by artvelog */ 
 .container {
-    width: 100%;
-    height: 250px;
-    width: 350px;
+    display: grid;
+    place-items: center; /* Center both horizontally and vertically */
+    height: 100%; /* Ensure the parent container takes up full height */
+    width: 100%; /* Ensure the parent container takes up full width */
+}
+
+.looseleaf {
+    width: clamp(70%, 18vw, 28rem); /* Responsive width */
+    height: clamp(20vh, 35vw, 45vh); /* Responsive height */
     background: #f1f1f1;
     background-image: linear-gradient(
         90deg,
-        transparent 40px, 
-        #ffb4b8 38px, 
-        #ffb4b8 42px,
-        transparent 42px
+        transparent 2.5rem, 
+        #ffb4b8 2.375rem, 
+        #ffb4b8 2.625rem,
+        transparent 2.625rem
       ),
       linear-gradient(#e1e1e1 0.1em, transparent 0.1em);
-    background-size: 100% 40px;
+    background-size: 100% 3rem; /* Fixed vertical spacing for consistent number of lines */
     z-index: 100;
     opacity: 0.85; 
-    border-radius: 15px; 
+    border-radius: 0.9375rem; /* 15px */
+    position: relative;
+    font-size: clamp(2rem, 4vw, 2.88rem); /* Responsive font size */
+    line-height: 3rem; /* Adjust line height for readability */
+    padding-top: 2%;
+    max-width: 800px;
+    max-height: 12rem;
 }
+
 .title {
-    color: rgb(33, 33, 33);
-    font-size: 30px;
-    padding-top: 9px;
-    margin-left: 20px;
-    line-height: 39px;
+    position: absolute; /* Position relative to .looseleaf */
+    top: 3%; /* Center vertically */
+    left: 60%; /* Move the text to the right */
+    transform: translate(-50%, 0); /* Center the text horizontally and vertically */
+    text-align: left; /* Optional: Align text to the left */
+    font-size: clamp(2rem, 3vw, 3.5rem); /* Increased responsive font size */
+    line-height: 3rem; /* Adjust line height for readability */
+    color: rgb(33, 33, 33); /* Text color */
+    width: 85%; /* Optional: Control the width of the text block */
 }
