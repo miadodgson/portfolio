@@ -26,4 +26,25 @@
 	background: lightblue;
 	border-radius: 8px;
   }
+
   
+.diplomaIcon {
+	width: 50%;
+	height: 50%; 
+	border-radius: 50%; /* make the image circular */
+	display:flex;
+	position:flex;
+	padding: 0px;
+	margin: 0;
+	flex-direction: column;
+	z-index:1;
+	}
+  
+	.cardsContainer {
+		display: flex; 
+		flex-wrap: wrap; 
+		justify-content: center;
+		gap: 2px; 
+		margin: 0px 0;
+	}
+	
