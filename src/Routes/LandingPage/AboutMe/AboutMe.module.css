@@ -4,10 +4,27 @@
 	gap: 20px;
 	width: 100vw;;
   }
+
+.hello {
+	font-family: "DM Sans";
+	font-size: 40px;
+	color:white;
+	padding: 0px;
+	margin-top: 80px;
+}
+
+.name {
+	font-family: "DM Sans";
+	font-size: 62px;
+	color:white;
+	padding: 20px;
+	margin-top: 0px;
+}
   
   .title {
-	font-family: 'Genome', sans-serif;
-	font-size: 60px;;
+	font-family: 'Genome', sans-serif; 
+	/* font-family: "DM Sans"; */
+	font-size: 60px;
 	color:white;
 	padding: 20px;
   }
