@@ -3,6 +3,7 @@
     place-items: center; /* Center both horizontally and vertically */
     height: 100%; /* Ensure the parent container takes up full height */
     width: 100%; /* Ensure the parent container takes up full width */
+    margin-top: 8%;;
 }
 
 .looseleaf {
@@ -19,7 +20,7 @@
       linear-gradient(#e1e1e1 0.1em, transparent 0.1em);
     background-size: 100% 3rem; /* Fixed vertical spacing for consistent number of lines */
     z-index: 100;
-    opacity: 0.85; 
+    opacity: 0.75; 
     border-radius: 0.9375rem; /* 15px */
     position: relative;
     font-size: clamp(2rem, 4vw, 2.88rem); /* Responsive font size */
