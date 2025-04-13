@@ -4,11 +4,13 @@ import Looseleaf from "../../../Components/Looseleaf/Looseleaf"
 import img from '../../../Assets/Images/DiplomaIcon.png'
 import GradientCard from "../../../Components/GradientCard/GradientCard"
 import GradientText from '../../../Components/GradientText/GradientText'
+import Lanyard from '../../../Components/Lanyard/Lanyard'
 
 
 const AboutMe: React.FC = () => {
 	return (
 		<div>
+			<Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
 			<div className={styles.titleBox}>
 				<div className={styles.hello}> Hello,  I'm
 				</div>
