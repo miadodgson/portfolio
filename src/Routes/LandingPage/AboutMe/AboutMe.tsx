@@ -14,16 +14,8 @@ const handleAnimationComplete = () => {
 const AboutMe: React.FC = () => {
   return (
     <div>
-      {/* SplitText Animation */}
-      <div>
-        <SplitText
-          text="Hello, no Tailwind!"
-          className={styles.splitTextTitle}
-          animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
-          animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
-          delay={100}
-        />
-      </div>
+        <Lanyard position={[0, 0, 40]} gravity={[0, -40, 0]} />
+
 
       {/* Title Section */}
       <div className={styles.titleBox}>
@@ -75,7 +67,6 @@ const AboutMe: React.FC = () => {
         <div className={styles.cardsContainer}>
           <Looseleaf />
         </div>
-        <Lanyard position={[0, 0, 40]} gravity={[0, -40, 0]} />
       </div>
     </div>
   );
