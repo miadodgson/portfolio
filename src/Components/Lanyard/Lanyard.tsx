@@ -118,10 +118,7 @@ function Band({ dragged, setDragged, maxSpeed = 50, minSpeed = 0 }: BandProps) {
     linearDamping: 4,
   };
 
-  useEffect(() => {
-    useGLTF.preload('/card.glb');
-  }, []);
-  
+  useGLTF.preload('/card.glb');
 
   const { nodes, materials } = useGLTF('/card.glb') as any;
   const texture = useTexture(lanyard);
