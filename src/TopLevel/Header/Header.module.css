@@ -7,7 +7,7 @@
 	margin: 0 auto;
 	padding: 0;
 	text-align: center;
-	z-index: 1000;
+	z-index: 10000000;
 	height: var(--Header-size, 80px);
 	justify-content: space-between;
 	box-sizing: border-box;
