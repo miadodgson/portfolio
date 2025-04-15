@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./AboutMe.module.css";
 import Looseleaf from "../../../Components/Looseleaf/Looseleaf";
-import GradientCard from "../../../Components/GradientCard/GradientCard";
 import GradientText from "../../../Text/GradientText/GradientText";
 import SplitText from "../../../Text/SplitText";
 import Lanyard from "../../../Components/Lanyard/Lanyard";
@@ -15,58 +14,41 @@ const AboutMe: React.FC = () => {
   return (
     <div>
         <Lanyard position={[0, 0, 40]} gravity={[0, -40, 0]} />
-
-
-      {/* Title Section */}
-      <div className={styles.titleBox}>
-        <SplitText
-          text="Hello, Tailwind!"
-          className={styles.splitTextTitle}
-          delay={150}
-          animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
-          animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
-          easing={(t: number) => 1 - Math.pow(1 - t, 3)}
-          threshold={0.2}
-          rootMargin="-50px"
-          onLetterAnimationComplete={handleAnimationComplete}
+		<div className={styles.titleBox}>
+			<SplitText
+			text="Hello, Tailwind!"
+			className={styles.splitTextTitle}
+			delay={150}
+			animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
+			animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
+			easing={(t: number) => 1 - Math.pow(1 - t, 3)}
+			threshold={0.2}
+			rootMargin="-50px"
+			onLetterAnimationComplete={handleAnimationComplete}
         />
         <div className={styles.hello}>Hello, I'm</div>
-        <div className={styles.name}>Maria Dodgson</div>
-        <GradientText
-          colors={["#ee82ee", "#6a5acd", "#9999ff", "#4079ff", "#40ffaa"]}
-          animationSpeed={5}
-          className="custom-class"
-        >
-          Biochemist
+        <GradientText className={styles.gradientText}>Maria Dodgson
         </GradientText>
-      </div>
-
-      {/* Rotating Text Section */}
-      <div className={styles.rotatingTextContainer}>
+      	</div>
+      	<div className={styles.rotatingTextContainer}>
         <RotatingText
-          texts={[
-            "Biochemist",
-            "UI Designer",
-            "Scientific Co-Author",
-            "Conservationist",
-          ]}
-          mainClassName="px-2 sm:px-2 md:px-3 bg-cyan-300 text-black overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
-          staggerFrom={"last"}
-          initial={{ y: "100%" }}
-          animate={{ y: 0 }}
-          exit={{ y: "-120%" }}
-          staggerDuration={0.025}
-          splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
-          transition={{ type: "spring", damping: 30, stiffness: 400 }}
-          rotationInterval={2000}
+			texts={[
+				"Biochemist",
+				"UI Designer",
+				"Scientific Co-Author",
+				"Conservationist",
+			]}
+			mainClassName="px-2 sm:px-2 md:px-3 bg-cyan-300 text-black overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
+			staggerFrom={"last"}
+			initial={{ y: "100%" }}
+			animate={{ y: 0 }}
+			exit={{ y: "-120%" }}
+			staggerDuration={0.025}
+			splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+			transition={{ type: "spring", damping: 30, stiffness: 400 }}
+			rotationInterval={2000}
         />
-      </div>
-
-      {/* Looseleaf and Lanyard Components */}
-      <div className={styles.container}>
-        <div className={styles.cardsContainer}>
-          <Looseleaf />
-        </div>
+		<Looseleaf />
       </div>
     </div>
   );
