@@ -120,7 +120,7 @@ function Band({ dragged, setDragged, maxSpeed = 50, minSpeed = 0 }: BandProps) {
 
   useGLTF.preload('/card.glb');
 
-  const { nodes, materials } = useGLTF('/card.glb') as any;
+  const { nodes, materials } = useGLTF(`${process.env.PUBLIC_URL}/card.glb`) as any;
   const texture = useTexture(lanyard);
   const [curve] = useState(
     () =>
