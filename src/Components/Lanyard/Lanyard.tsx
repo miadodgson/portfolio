@@ -118,7 +118,7 @@ function Band({ dragged, setDragged, maxSpeed = 50, minSpeed = 0 }: BandProps) {
     linearDamping: 4,
   };
 
-  const { nodes, materials } = useGLTF('/card.GLB') as any;
+  const { nodes, materials } = useGLTF('/card.glb') as any;
   const texture = useTexture(lanyard);
   const [curve] = useState(
     () =>
