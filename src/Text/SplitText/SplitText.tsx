@@ -1,5 +1,6 @@
 import { useSprings, animated } from '@react-spring/web';
 import { useEffect, useRef, useState } from 'react';
+import styles from './SplitText.module.css';
 
 interface SplitTextProps {
   text?: string;
@@ -33,7 +34,6 @@ const SplitText: React.FC<SplitTextProps> = ({
   const words = text.trim().split(' ').map(word => word.split(''));
   const letters = words.flat();
 
-  // Intersection Observer
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -50,7 +50,7 @@ const SplitText: React.FC<SplitTextProps> = ({
     return () => observer.disconnect();
   }, [threshold, rootMargin]);
 
-  // Create springs for each letter
+
   const springs = useSprings(
     letters.length,
     letters.map((_, i) => ({
@@ -76,19 +76,13 @@ const SplitText: React.FC<SplitTextProps> = ({
   return (
     <p
       ref={ref}
-      className={`split-text-parent ${className}`}
-      style={{
-        textAlign,
-        overflow: 'hidden',
-        display: 'inline',
-        whiteSpace: 'normal',
-        wordWrap: 'break-word',
-      }}
+      className={`${styles.splitTextParent} ${className}`}
+      style={{ textAlign }}
     >
       {words.map((word, wordIndex) => (
         <span
           key={`word-${wordIndex}`}
-          style={{ display: 'inline-block', whiteSpace: 'nowrap' }}
+          className={styles.word}
         >
           {word.map((letter, letterIndex) => {
             const currentIndex = globalIndex++;
@@ -105,8 +99,7 @@ const SplitText: React.FC<SplitTextProps> = ({
               </AnimatedSpan>
             );
           })}
-          {/* Space between words */}
-          <span style={{ display: 'inline-block', width: '0.3em' }}>&nbsp;</span>
+          <span className={styles.space}>&nbsp;</span>
         </span>
       ))}
     </p>

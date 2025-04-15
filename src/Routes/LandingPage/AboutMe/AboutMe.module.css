@@ -10,30 +10,6 @@
 	position: relative;
   }
 
-.hello {
-	font-family: "DM Sans";
-	font-size: 40px;
-	color:white;
-	padding: 0px;
-	margin-top: 10px;
-}
-
-.name {
-	font-family: "DM Sans";
-	font-size: 62px;
-	color:white;
-	padding: 20px;
-	margin-top: 0px;
-}
-  
-  .title {
-	font-family: 'Genome', sans-serif; 
-	/* font-family: "DM Sans"; */
-	font-size: 60px;
-	color:white;
-	padding: 20px;
-  }
-
   .titleBox {
 	flex: 1;
 	padding: 20px;
@@ -43,46 +19,16 @@
 	overflow: visible;
 	position: relative;
 	z-index: 1;
-	margin-top: 275px;
+	margin-top: 350px;
   }
   
-  .box {
-	flex: 1;
-	padding: 20px;
-	text-align: center;
-	background: lightblue;
-	border-radius: 8px;
-  }
-
-  
-.diplomaIcon {
-	width: 50%;
-	height: 50%; 
-	border-radius: 50%; /* make the image circular */
-	display:flex;
-	position:flex;
-	padding: 0px;
-	margin: 0;
-	flex-direction: column;
-	z-index:1;
-	}
-
-	.cardsContainer {
-		display: flex; 
-		flex-wrap: wrap; 
-		justify-content: center;
-		gap: 2px; 
-		margin: 0px 0;
-		position: relative;
-		z-index: 1;
-	}
-	
 .gradientText {
 	font-size: 50px;
 }
 
 .rotatingTextContainer {
-	margin: 25px 0;
+	margin: 0px 0;
+	padding-bottom: 20px;;
 }
 
 .splitTextTitle {

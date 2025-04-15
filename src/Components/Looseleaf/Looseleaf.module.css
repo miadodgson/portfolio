@@ -3,7 +3,7 @@
     place-items: center; /* Center both horizontally and vertically */
     height: 100%; /* Ensure the parent container takes up full height */
     width: 100%; /* Ensure the parent container takes up full width */
-    margin-top: 2%;
+    margin-top: 50px;
 }
 
 .looseleaf {

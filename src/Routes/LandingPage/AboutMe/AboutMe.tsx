@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./AboutMe.module.css";
 import Looseleaf from "../../../Components/Looseleaf/Looseleaf";
 import GradientText from "../../../Text/GradientText/GradientText";
-import SplitText from "../../../Text/SplitText";
+import SplitText from "../../../Text/SplitText/SplitText";
 import Lanyard from "../../../Components/Lanyard/Lanyard";
 import RotatingText from "../../../Text/RotatingText/RotatingText";
 
@@ -16,7 +16,7 @@ const AboutMe: React.FC = () => {
         <Lanyard position={[0, 0, 40]} gravity={[0, -40, 0]} />
 		<div className={styles.titleBox}>
 			<SplitText
-			text="Hello, Tailwind!"
+			text="Hello, I'm"
 			className={styles.splitTextTitle}
 			delay={150}
 			animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
@@ -26,7 +26,6 @@ const AboutMe: React.FC = () => {
 			rootMargin="-50px"
 			onLetterAnimationComplete={handleAnimationComplete}
         />
-        <div className={styles.hello}>Hello, I'm</div>
         <GradientText className={styles.gradientText}>Maria Dodgson
         </GradientText>
       	</div>
