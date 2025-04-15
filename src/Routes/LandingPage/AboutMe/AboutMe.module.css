@@ -2,7 +2,12 @@
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
-	width: 100vw;;
+	width: 100%;
+	height: 100vh;
+	z-index: 1;
+	margin: 0px;
+	overflow: visible;
+	position: relative;
   }
 
 .hello {
@@ -10,7 +15,7 @@
 	font-size: 40px;
 	color:white;
 	padding: 0px;
-	margin-top: 80px;
+	margin-top: 10px;
 }
 
 .name {
@@ -34,6 +39,11 @@
 	padding: 20px;
 	text-align: center;
 	border-radius: 8px;
+	z-index: 10;
+	overflow: visible;
+	position: relative;
+	z-index: 1;
+	margin-top: 275px;
   }
   
   .box {
@@ -56,12 +66,21 @@
 	flex-direction: column;
 	z-index:1;
 	}
-  
+
 	.cardsContainer {
 		display: flex; 
 		flex-wrap: wrap; 
 		justify-content: center;
 		gap: 2px; 
 		margin: 0px 0;
+		position: relative;
+		z-index: 1;
 	}
 	
+.gradientText {
+	font-size: 50px;
+}
+
+.rotatingTextContainer {
+	margin: 25px 0;
+}
