@@ -12,7 +12,7 @@ const AboutMe: React.FC = () => {
 	return (
 		<div>
 			{/* <div className={styles.lanyardElement}> */}
-			<Lanyard position={[0, 0, 40]} gravity={[0, -40, 0]} />
+			{/* <Lanyard position={[0, 0, 40]} gravity={[0, -40, 0]} /> */}
 			{/* </div> */}
 			<div className={styles.titleBox}>
 				<div className={styles.hello}> Hello,  I'm
