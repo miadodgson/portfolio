@@ -10,7 +10,7 @@
 	font-family: -apple-system, BlinkMacSystemFont, 'PP Neue Montreal','Segoe UI', 'Roboto', 'Oxygen','Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	height: calc(100% -var(--bg));
+	height: 100vh;
 	flex: 1; 
 	justify-content: flex-start;
   }
