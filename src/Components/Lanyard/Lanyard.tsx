@@ -205,7 +205,9 @@ function Band({ dragged, setDragged, maxSpeed = 50, minSpeed = 0 }: BandProps) {
   });
 
   curve.curveType = "chordal";
-  texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+  if (texture instanceof THREE.Texture) {
+    texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+  }
 
   return (
     <>
