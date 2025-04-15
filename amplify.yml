@@ -1,16 +1,17 @@
+version: 1
 frontend:
   phases:
     build:
       commands:
-        - yarn install
-        - yarn build
+        - npm install
+        - npm run build
   artifacts:
-    baseDirectory: build
+    baseDirectory: build  # This should point to the 'build' folder after running `build`
     files:
-      - '**/*'
+      - '**/*'  # Include all files from the 'build' folder
   cache:
     paths:
-      - node_modules/**
+      - node_modules/**/*
 
 # # Rewrite rules
 # redirects:
