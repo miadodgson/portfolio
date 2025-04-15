@@ -1,9 +1,11 @@
 version: 1
 frontend:
   phases:
-    build:
+    preBuild:
       commands:
         - yarn install
+    build:
+      commands:
         - yarn build
   artifacts:
     baseDirectory: build
@@ -11,7 +13,14 @@ frontend:
       - '**/*'
   cache:
     paths:
-      - node_modules/**/* 
+      - node_modules/**/*
+
+
+  customHeaders:
+    - pattern: "**/*.glb"
+      headers:
+        - key: "Content-Type"
+          value: "model/gltf-binary"
 
 
 # # Rewrite rules
