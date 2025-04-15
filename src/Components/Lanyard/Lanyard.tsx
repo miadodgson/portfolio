@@ -19,7 +19,7 @@ import {
 } from "@react-three/rapier";
 import { MeshLineGeometry, MeshLineMaterial } from "meshline";
 import * as THREE from "three";
-import lanyard from "../../Assets/Images/Lanyard.png";
+import lanyard from "../../Assets/Images/LanyardBand.png";
 import "./Lanyard.css";
 
 extend({ MeshLineGeometry, MeshLineMaterial });
