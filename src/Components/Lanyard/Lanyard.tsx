@@ -19,10 +19,8 @@ import {
 } from "@react-three/rapier";
 import { MeshLineGeometry, MeshLineMaterial } from "meshline";
 import * as THREE from "three";
-
-import cardGLB from "../../Assets/card.glb";
+import cardGLB from "../../Assets/Images/card.glb";
 import lanyard from "../../Assets/Images/Lanyard.png";
-
 import "./Lanyard.css";
 
 extend({ MeshLineGeometry, MeshLineMaterial });
@@ -37,64 +35,70 @@ interface LanyardProps {
 export default function Lanyard({
   position = [0, 0, 30],
   gravity = [0, -40, 0],
-  fov = 20,
+  fov = 25,
   transparent = true,
 }: LanyardProps) {
+  const [dragged, setDragged] = useState<false | THREE.Vector3>(false);
+
   return (
     <div className="lanyard-wrapper">
-      <Canvas
-        camera={{ position, fov }}
-        gl={{ alpha: transparent }}
-        onCreated={({ gl }) =>
-          gl.setClearColor(new THREE.Color(0x000000), transparent ? 0 : 1)
-        }
-      >
-        <ambientLight intensity={Math.PI} />
-        <Physics gravity={gravity} timeStep={1 / 60}>
-          <Band />
-        </Physics>
-        <Environment blur={0.75}>
-          <Lightformer
-            intensity={2}
-            color="white"
-            position={[0, -1, 5]}
-            rotation={[0, 0, Math.PI / 3]}
-            scale={[100, 0.1, 1]}
-          />
-          <Lightformer
-            intensity={3}
-            color="white"
-            position={[-1, -1, 1]}
-            rotation={[0, 0, Math.PI / 3]}
-            scale={[100, 0.1, 1]}
-          />
-          <Lightformer
-            intensity={3}
-            color="white"
-            position={[1, 1, 1]}
-            rotation={[0, 0, Math.PI / 3]}
-            scale={[100, 0.1, 1]}
-          />
-          <Lightformer
-            intensity={10}
-            color="white"
-            position={[-10, 0, 14]}
-            rotation={[0, Math.PI / 2, Math.PI / 3]}
-            scale={[100, 10, 1]}
-          />
-        </Environment>
-      </Canvas>
+      <div className="canvas-container">
+        <Canvas
+          camera={{ position, fov }}
+          style={{ width: '100%', height: '100%' }}
+          gl={{ alpha: transparent }}
+          onCreated={({ gl }) =>
+            gl.setClearColor(new THREE.Color(0x000000), transparent ? 0 : 1)
+          }
+        >
+          <ambientLight intensity={Math.PI} />
+          <Physics gravity={gravity} timeStep={1 / 60}>
+            <Band dragged={dragged} setDragged={setDragged} />
+          </Physics>
+          <Environment blur={0.75}>
+            <Lightformer
+              intensity={2}
+              color="white"
+              position={[0, -1, 5]}
+              rotation={[0, 0, Math.PI / 3]}
+              scale={[100, 0.1, 1]}
+            />
+            <Lightformer
+              intensity={3}
+              color="white"
+              position={[-1, -1, 1]}
+              rotation={[0, 0, Math.PI / 3]}
+              scale={[100, 0.1, 1]}
+            />
+            <Lightformer
+              intensity={3}
+              color="white"
+              position={[1, 1, 1]}
+              rotation={[0, 0, Math.PI / 3]}
+              scale={[100, 0.1, 1]}
+            />
+            <Lightformer
+              intensity={10}
+              color="white"
+              position={[-10, 0, 14]}
+              rotation={[0, Math.PI / 2, Math.PI / 3]}
+              scale={[100, 10, 1]}
+            />
+          </Environment>
+        </Canvas>
+      </div>
     </div>
   );
 }
 
 interface BandProps {
+  dragged: false | THREE.Vector3;
+  setDragged: (d: false | THREE.Vector3) => void;
   maxSpeed?: number;
   minSpeed?: number;
 }
 
-function Band({ maxSpeed = 50, minSpeed = 0 }: BandProps) {
-  // Using "any" for refs since the exact types depend on Rapier's internals
+function Band({ dragged, setDragged, maxSpeed = 50, minSpeed = 0 }: BandProps) {
   const band = useRef<any>(null);
   const fixed = useRef<any>(null);
   const j1 = useRef<any>(null);
@@ -126,7 +130,6 @@ function Band({ maxSpeed = 50, minSpeed = 0 }: BandProps) {
         new THREE.Vector3(),
       ])
   );
-  const [dragged, drag] = useState<false | THREE.Vector3>(false);
   const [hovered, hover] = useState(false);
 
   const [isSmall, setIsSmall] = useState<boolean>(() => {
@@ -205,34 +208,19 @@ function Band({ maxSpeed = 50, minSpeed = 0 }: BandProps) {
 
   return (
     <>
-      <group position={[0, 4, 0]}>
+      <group position={[0, 11, 0]}>
         <RigidBody
           ref={fixed}
           {...segmentProps}
           type={"fixed" as RigidBodyProps["type"]}
         />
-        <RigidBody
-          position={[0.5, 0, 0]}
-          ref={j1}
-          {...segmentProps}
-          type={"dynamic" as RigidBodyProps["type"]}
-        >
+        <RigidBody position={[0.5, 0, 0]} ref={j1} {...segmentProps}>
           <BallCollider args={[0.1]} />
         </RigidBody>
-        <RigidBody
-          position={[1, 0, 0]}
-          ref={j2}
-          {...segmentProps}
-          type={"dynamic" as RigidBodyProps["type"]}
-        >
+        <RigidBody position={[1, 0, 0]} ref={j2} {...segmentProps}>
           <BallCollider args={[0.1]} />
         </RigidBody>
-        <RigidBody
-          position={[1.5, 0, 0]}
-          ref={j3}
-          {...segmentProps}
-          type={"dynamic" as RigidBodyProps["type"]}
-        >
+        <RigidBody position={[1.5, 0, 0]} ref={j3} {...segmentProps}>
           <BallCollider args={[0.1]} />
         </RigidBody>
         <RigidBody
@@ -247,20 +235,18 @@ function Band({ maxSpeed = 50, minSpeed = 0 }: BandProps) {
         >
           <CuboidCollider args={[0.8, 1.125, 0.01]} />
           <group
-            scale={2.25}
-            position={[0, -1.2, -0.05]}
+            scale={5.25}
+            position={[0, -5, -0.05]}
             onPointerOver={() => hover(true)}
             onPointerOut={() => hover(false)}
             onPointerUp={(e: any) => {
               e.target.releasePointerCapture(e.pointerId);
-              drag(false);
+              setDragged(false);
             }}
             onPointerDown={(e: any) => {
               e.target.setPointerCapture(e.pointerId);
-              drag(
-                new THREE.Vector3()
-                  .copy(e.point)
-                  .sub(vec.copy(card.current.translation()))
+              setDragged(
+                new THREE.Vector3().copy(e.point).sub(vec.copy(card.current.translation()))
               );
             }}
           >
