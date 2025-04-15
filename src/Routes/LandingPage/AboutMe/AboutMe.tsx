@@ -1,49 +1,50 @@
-import React from "react"
-import styles from './AboutMe.module.css'
-import Looseleaf from "../../../Components/Looseleaf/Looseleaf"
-import img from '../../../Assets/Images/DiplomaIcon.png'
-import GradientCard from "../../../Components/GradientCard/GradientCard"
-import GradientText from '../../../Components/GradientText/GradientText'
+import React from "react";
+import styles from './AboutMe.module.css';
+import Looseleaf from "../../../Components/Looseleaf/Looseleaf";
+import GradientCard from "../../../Components/GradientCard/GradientCard";
+import GradientText from '../../../Text/GradientText';
+import SplitText from '../../../Text/SplitText';
 
+const handleAnimationComplete = () => {
+	console.log('All letters have animated!');
+};
 
 const AboutMe: React.FC = () => {
 	return (
 		<div>
+			<div>
+				<SplitText
+					text="Hello, no Tailwind!"
+					className={styles.splitTextTitle}
+					animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
+					animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
+					delay={100}
+				/>
+			</div>
 			<div className={styles.titleBox}>
-				<div className={styles.hello}> Hello,  I'm
-				</div>
-				<div className={styles.name}> Maria Dodgson
-				</div>
+				<SplitText
+					text="Hello, Tailwind!"
+					className={styles.splitTextTitle}
+					delay={150}
+					animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
+					animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
+					easing={(t: number) => 1 - Math.pow(1 - t, 3)}
+					threshold={0.2}
+					rootMargin="-50px"
+					onLetterAnimationComplete={handleAnimationComplete}
+				/>
+				<div className={styles.hello}>Hello, I'm</div>
+				<div className={styles.name}>Maria Dodgson</div>
 				<GradientText
-					colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
-					animationSpeed={3}
+					colors={["#ee82ee", "#6a5acd", "#9999ff", "#4079ff", "#40ffaa"]}
+					animationSpeed={5}
 					className="custom-class"
-					>
-					Add a splash of color!
+				>
+					Biochemist
 				</GradientText>
-				{/* <div className={styles.title}>Biochemist
-				</div> */}
 			</div>
 			<div className={styles.container}>
-					{/* <div className={styles.box}>Column 1
-					</div> */}
-				{/* <img src={img} alt="Achievement" className={styles.diplomaIcon} /> */}
 				<div className={styles.cardsContainer}>
-					<GradientCard
-						icon="🏆"
-						title="B Sc."
-						text=""
-					/>
-					<GradientCard
-						icon="📚"
-						title="Education"
-						text=""
-					/>
-					<GradientCard
-						icon="🔬"
-						title="Research"
-						text=""
-					/>
 					<Looseleaf />
 				</div>
 			</div>
@@ -51,4 +52,4 @@ const AboutMe: React.FC = () => {
 	);
 };
 
-export default AboutMe
+export default AboutMe;
