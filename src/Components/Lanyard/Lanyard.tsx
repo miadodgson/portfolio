@@ -211,7 +211,7 @@ function Band({ dragged, setDragged, maxSpeed = 50, minSpeed = 0 }: BandProps) {
 
   return (
     <>
-      <group position={[0, 11, 0]}>
+      <group position={[0, 10, 0]}>
         <RigidBody
           ref={fixed}
           {...segmentProps}
@@ -238,8 +238,8 @@ function Band({ dragged, setDragged, maxSpeed = 50, minSpeed = 0 }: BandProps) {
         >
           <CuboidCollider args={[0.8, 1.125, 0.01]} />
           <group
-            scale={5.25}
-            position={[0, -5, -0.05]}
+            scale={6.25}
+            position={[0, -6.25, -0.05]}
             onPointerOver={() => hover(true)}
             onPointerOut={() => hover(false)}
             onPointerUp={(e: any) => {

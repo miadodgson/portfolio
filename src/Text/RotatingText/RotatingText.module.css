@@ -5,10 +5,9 @@
 }
 
 .leftText {
-  font-size: 24px;
+  font-size: 30px;
   color: white;
   margin-right: 10px;
-  font-size: 25px;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-style: normal;
@@ -24,7 +23,7 @@
   font-style: normal;
   background-color: rgb(235, 185, 255);
   border-radius: 10px;
-  font-size: 25px;
+  font-size: 30px;
   padding: 2px 6px 2px 6px; 
   transition: width 3s ease-in-out, height 3s ease-in-out, font-size 3s ease-in-out, padding 3s ease-in-out;
   overflow: hidden;
