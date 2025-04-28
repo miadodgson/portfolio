@@ -20,7 +20,7 @@ import {
 import { MeshLineGeometry, MeshLineMaterial } from "meshline";
 import * as THREE from "three";
 import lanyard from "../../Assets/Images/LanyardBand.png";
-import "./Lanyard.css";
+import styles from "./Lanyard.module.css";
 
 extend({ MeshLineGeometry, MeshLineMaterial });
 
@@ -40,8 +40,8 @@ export default function Lanyard({
   const [dragged, setDragged] = useState<false | THREE.Vector3>(false);
 
   return (
-    <div className="lanyard-wrapper">
-      <div className="canvas-container">
+    <div className={styles.lanyardWrapper}>
+      <div className={styles.canvavsContainer}>
         <Canvas
           camera={{ position, fov }}
           style={{ width: '100%', height: '100%' }}
