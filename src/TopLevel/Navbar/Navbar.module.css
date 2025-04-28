@@ -91,9 +91,9 @@ a {
   top: 63px;
   width: flex;
   transform: translateX(-45%);
-  /* background-color: #030936; */
-  background:rgb(15, 14, 14);
-  opacity: 98%;
+  background-color: #010a25; 
+  /* background:rgb(15, 14, 14); */
+  opacity: 90%;
   border: var(--border);
   border-color: rgb(90, 89, 90);
   border-radius: var(--border-radius);
@@ -130,8 +130,8 @@ a {
 }
 
 .menuItem:hover {
-  /* background-color: #0935b8; */
-  background:rgb(214, 127, 233);
+  background-color: #0935b8; 
+  /* background:rgb(214, 127, 233); */
 }
 
 

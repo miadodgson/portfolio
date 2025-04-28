@@ -13,7 +13,8 @@ body {
     min-height: 100vh; 
     box-sizing: border-box;
     overflow: auto;
-    background-image: url('../../Assets/Images/BackgroundGradient.jpg');
+    background-image: url('../../Assets/Images/Background.png');
+    /* background-image: url('../../Assets/Images/BackgroundGradient.jpg'); */
     background-size: cover; 
     background-attachment: fixed; 
     background-position: center; 
