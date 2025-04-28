@@ -34,7 +34,7 @@ interface LanyardProps {
 export default function Lanyard({
   position = [0, 0, 30],
   gravity = [0, -40, 0],
-  fov = 25,
+  fov = 20,
   transparent = true,
 }: LanyardProps) {
   const [dragged, setDragged] = useState<false | THREE.Vector3>(false);
@@ -79,7 +79,7 @@ export default function Lanyard({
             <Lightformer
               intensity={10}
               color="white"
-              position={[-10, 0, 14]}
+              position={[-16, 0, 14]}
               rotation={[0, Math.PI / 2, Math.PI / 3]}
               scale={[100, 10, 1]}
             />
@@ -193,6 +193,7 @@ function Band({ dragged, setDragged, maxSpeed = 50, minSpeed = 0 }: BandProps) {
           delta * (minSpeed + clampedDistance * (maxSpeed - minSpeed))
         );
       });
+      
       curve.points[0].copy(j3.current.translation());
       curve.points[1].copy(j2.current.lerped);
       curve.points[2].copy(j1.current.lerped);
@@ -211,7 +212,7 @@ function Band({ dragged, setDragged, maxSpeed = 50, minSpeed = 0 }: BandProps) {
 
   return (
     <>
-      <group position={[0, 10, 0]}>
+      <group position={[0, 9.5, 0]}>
         <RigidBody
           ref={fixed}
           {...segmentProps}
