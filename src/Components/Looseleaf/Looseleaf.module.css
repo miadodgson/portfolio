@@ -1,14 +1,14 @@
 .container {
     display: grid;
-    place-items: center; /* Center both horizontally and vertically */
-    height: 100%; /* Ensure the parent container takes up full height */
-    width: 100%; /* Ensure the parent container takes up full width */
+    place-items: center; 
+    height: 100%; 
+    width: 100%; 
     margin-top: 50px;
 }
 
 .looseleaf {
-    width: clamp(70%, 18vw, 28rem); /* Responsive width */
-    height: clamp(20vh, 35vw, 45vh); /* Responsive height */
+    width: 350px;
+    height: 120px;
     background: #f1f1f1;
     background-image: linear-gradient(
         90deg,
@@ -18,26 +18,38 @@
         transparent 2.625rem
       ),
       linear-gradient(#e1e1e1 0.1em, transparent 0.1em);
-    background-size: 100% 3rem; /* Fixed vertical spacing for consistent number of lines */
+    background-size: 100% 3rem; 
     z-index: 100;
-    opacity: 0.75; 
-    border-radius: 0.9375rem; /* 15px */
+    opacity: 0.95; 
+    border-radius: 15px;
     position: relative;
-    font-size: clamp(2rem, 4vw, 2.88rem); /* Responsive font size */
-    line-height: 3rem; /* Adjust line height for readability */
+    font-size: 10px;; 
+    line-height: 3rem; 
     padding-top: 2%;
     max-width: 800px;
     max-height: 12rem;
 }
 
 .title {
-    position: absolute; /* Position relative to .looseleaf */
-    top: 3%; /* Center vertically */
-    left: 60%; /* Move the text to the right */
-    transform: translate(-50%, 0); /* Center the text horizontally and vertically */
-    text-align: left; /* Optional: Align text to the left */
-    font-size: clamp(2rem, 3vw, 3.5rem); /* Increased responsive font size */
-    line-height: 3rem; /* Adjust line height for readability */
-    color: rgb(33, 33, 33); /* Text color */
-    width: 85%; /* Optional: Control the width of the text block */
+    position: absolute; 
+    top: 3%; 
+    left: 60%; 
+    transform: translate(-50%, 0);
+    text-align: left; 
+    font-size: 28px; 
+    line-height: 3rem; 
+    color: rgb(33, 33, 33); 
+    width: 85%; 
 }
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
