@@ -6,7 +6,7 @@
   width: 100vw;
   height: 95vh;
   overflow: visible;
-  pointer-events: none; 
+  pointer-events: none;
 }
 
 .lanyardWrapper .canvasContainer {
@@ -37,6 +37,6 @@ canvas {
 @media (max-width: 768px) {
   .lanyardWrapper {
     /* Adjusted height for smaller screens to improve layout */
-    height: 95vh;
+    height: 90vh;
   }
 }
