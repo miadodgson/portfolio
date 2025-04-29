@@ -93,7 +93,7 @@ a {
   transform: translateX(-45%);
   background-color: #010a25; 
   /* background:rgb(15, 14, 14); */
-  opacity: 90%;
+  opacity: 92%;
   border: var(--border);
   border-color: rgb(90, 89, 90);
   border-radius: var(--border-radius);
@@ -114,7 +114,7 @@ a {
   transition: background var(--speed);
   padding: 8px;
   font-size: 25px; 
-  font-family: "DM Sans", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 300;
   font-style: normal;
   color: white;
