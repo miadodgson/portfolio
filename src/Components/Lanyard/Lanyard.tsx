@@ -40,7 +40,8 @@ export default function Lanyard({
   const [dragged, setDragged] = useState<false | THREE.Vector3>(false);
 
   return (
-    <div className={styles.lanyardWrapper}>
+    <div   className={`${styles.lanyardWrapper} ${dragged ? styles.dragging : ""}`}
+>
       <div className={styles.canvasContainer}>
         <Canvas
           camera={{ position, fov }}

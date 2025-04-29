@@ -14,7 +14,8 @@ const AboutMe: React.FC = () => {
   return (
 	
     <div className={styles.container}>
-		<Lanyard position={[0, 0, 40]} gravity={[0, -40, 0]} />
+		<div className={styles.lanyardWrapper}>
+		<Lanyard position={[0, 0, 40]} gravity={[0, -40, 0]} /></div>
 			<div className={styles.titleBox}>
 				<SplitText
 					text="Hello, I'm"
