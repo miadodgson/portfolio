@@ -12,9 +12,9 @@ const handleAnimationComplete = () => {
 
 const AboutMe: React.FC = () => {
   return (
+	
     <div className={styles.container}>
-        <Lanyard position={[0, 0, 40]} gravity={[0, -40, 0]} />
-		<div className={styles.contentWrapper}>
+		<Lanyard position={[0, 0, 40]} gravity={[0, -40, 0]} />
 			<div className={styles.titleBox}>
 				<SplitText
 					text="Hello, I'm"
@@ -48,7 +48,6 @@ const AboutMe: React.FC = () => {
 					rotationInterval={2000}
 				/>
 				<Looseleaf />
-			</div>
 		</div>
     </div>
   );

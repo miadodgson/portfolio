@@ -41,7 +41,7 @@ export default function Lanyard({
 
   return (
     <div className={styles.lanyardWrapper}>
-      <div className={styles.canvavsContainer}>
+      <div className={styles.canvasContainer}>
         <Canvas
           camera={{ position, fov }}
           style={{ width: '100%', height: '100%' }}
@@ -240,6 +240,7 @@ function Band({ dragged, setDragged, maxSpeed = 50, minSpeed = 0 }: BandProps) {
           <CuboidCollider args={[0.8, 1.125, 0.01]} />
           <group
             scale={6.25}
+            /* Lanyard Size */
             position={[0, -6.25, -0.05]}
             onPointerOver={() => hover(true)}
             onPointerOut={() => hover(false)}
