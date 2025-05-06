@@ -9,16 +9,14 @@
     display: inline-block;
     white-space: nowrap;
     font-family: "DM Sans";
-	  font-size: 40px;
-    font-weight: 400;
 	  color:white;
 	  padding: 0px;
-	  margin-top: 60px;
+	  margin-top: 40px;
   }
   
   .space {
     display: inline-block;
-    width: 0.3em;
+    width: 0.35em;
   }
   
 

@@ -30,28 +30,34 @@
 	text-align: center;
 	border-radius: 8px;
 	position: relative;
-	margin-top: -8px;
 }
 
   
 .gradientText {
-	font-size: 50px;
-	margin-top: 0px;
+	font-size: clamp(3rem, 5vw, 4rem);
+	line-height: 1.2;
+	font-weight: 400;
+	max-width: 20ch;
+	margin: 0 auto;
 }
 
 .splitTextTitle {
-	font-size: 30px;
-	font-weight: 600;
-	text-align: center;
-	margin-bottom: 20px; 
+	font-size: clamp(2.5rem, 5vw, 3.5rem);
+	line-height: 1.2;
+	font-weight: 400;
+	max-width: 20ch;
+	margin: 0 auto;
   }
 
 .rotatingTextContainer {
-	margin: 0px 0;
-	padding-bottom: 20px;
-	margin-top: 20px;
-	font-size: 28px;
+	font-size: clamp(2rem, 5vw, 4rem);
+	line-height: 1.2;
 	font-weight: 600;
+	max-width: 25ch;
+	margin: 0 auto;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	margin-top: 10px;
 }
 
 /* Desktop Size */
@@ -65,10 +71,5 @@
 	.lanyardWrapper {
 	  /* Adjusted height for smaller screens to improve layout */
 	  height: 45vh;
-	  
-
-	.textRotate {
-	  font-size: 26px;
 	}
-  }
 }
