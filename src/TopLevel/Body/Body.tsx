@@ -13,10 +13,11 @@ const Body = () => {
         <div className={styles.bodyContentContainer}> 
             <Routes>
                 <Route path='/' element={<LandingPage />}/>
-				<Route path='/Education' element={<Education />}/>
-				<Route path='/Experience' element={<Experience />}/>
-				<Route path='/Publications' element={<Publications />}/>
-				<Route path='/Resources' element={<Resources />}/>
+                {/* <Route path='/Education' element={<Education />}/>
+                <Route path='/Experience' element={<Experience />}/>
+                <Route path='/Publications' element={<Publications />}/>
+                <Route path='/Resources' element={<Resources />}/> 
+                */}
                 <Route path='/Contact' element={<Contact />}/>
             </Routes>
         </div>
