@@ -47,7 +47,7 @@ const AboutMe: React.FC = () => {
 					transition={{ type: "spring", damping: 30, stiffness: 400 }}
 					rotationInterval={2000}
 				/>
-				<Looseleaf />
+				{/*<Looseleaf />*/}
 			</div>
 		</div>
     </div>
