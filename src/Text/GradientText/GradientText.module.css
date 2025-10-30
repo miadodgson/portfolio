@@ -19,6 +19,8 @@
     animation-name: gradientAnimation;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+    font-family: -apple-system, BlinkMacSystemFont,'Inter', sans-serif;
+    font-weight: 400;
   }
   
 

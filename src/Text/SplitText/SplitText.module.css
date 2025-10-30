@@ -1,0 +1,23 @@
+.splitTextParent {
+    display: inline;
+    overflow: hidden;
+    white-space: normal;
+    word-wrap: break-word;
+  }
+  
+  .word {
+    display: inline-block;
+    white-space: nowrap;
+    font-family: "DM Sans";
+	  color:white;
+	  padding: 0px;
+	  margin-top: 40px;
+  }
+  
+  .space {
+    display: inline-block;
+    width: 0.35em;
+  }
+  
+
+  

@@ -1,11 +1,11 @@
 /* From Uiverse.io by MikeAndrewDesigner */ 
 .eCard {
-  margin: 100px auto;
+  margin: 10px auto;
   background: transparent;
   box-shadow: 0px 8px 28px -9px rgba(0,0,0,0.45);
   position: relative;
-  width: 240px;
-  height: 330px;
+  width: 260px;
+  height: 80px;
   border-radius: 16px;
   overflow: hidden;
 	max-width: 100%;
@@ -103,7 +103,7 @@
   margin: 0 auto;
   width: 100%;
   height: auto;
-	  display: flex;
+	display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;

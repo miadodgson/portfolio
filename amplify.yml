@@ -1,0 +1,33 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - yarn install
+    build:
+      commands:
+        - yarn build
+  artifacts:
+    baseDirectory: build
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
+
+
+  customHeaders:
+    - pattern: "**/*.glb"
+      headers:
+        - key: "Content-Type"
+          value: "model/gltf-binary"
+
+
+# # Rewrite rules
+# redirects:
+#   - source: "/<*>.glb"
+#     target: "/<*>.glb"
+#     status: 200
+#   - source: "/<*>"
+#     target: "/index.html"
+#     status: 200

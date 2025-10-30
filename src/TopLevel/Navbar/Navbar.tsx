@@ -108,10 +108,12 @@ const DropdownMenu = ({ closeMenu }: DropdownMenuProps) => {
     <div className={styles.dropdown}>
       <div className={styles.menu}>
         <DropdownItem leftIcon={<img src={HomeIcon} height={35} width={35} alt="Home" />} route="/" routeName="Home" />
-        <DropdownItem leftIcon={<img src={EducationIcon} alt="Education" height={35} width={35} />} route="/Education" routeName="Education" />
-        <DropdownItem leftIcon={<img src={ExperienceIcon} alt="Research" height={40} width={40} />} route="/Experience" routeName="Research" />
-        <DropdownItem leftIcon={<img src={PublicationsIcon} alt="Publications" height={40} width={40} />} route="/Publications" routeName="Publications" />
-        <DropdownItem leftIcon={<img src={ResourcesIcon} alt="Resources" height={30} width={30} />} route="/Resources" routeName="Resources" />
+          {/* 
+          <DropdownItem leftIcon={<img src={EducationIcon} alt="Education" height={35} width={35} />} route="/Education" routeName="Education" />
+          <DropdownItem leftIcon={<img src={ExperienceIcon} alt="Research" height={40} width={40} />} route="/Experience" routeName="Research" />
+          <DropdownItem leftIcon={<img src={ResourcesIcon} alt="Resources" height={30} width={30} />} route="/Resources" routeName="Resources" />
+         */}
+        <DropdownItem leftIcon={<img src={PublicationsIcon} alt="Research" height={40} width={40} />} route="/Publications" routeName="Research" />
         <DropdownItem leftIcon={<img src={ContactIcon} alt="Contact" height={35} width={35} />} route="/Contact" routeName="Contact" />
       </div>
     </div>

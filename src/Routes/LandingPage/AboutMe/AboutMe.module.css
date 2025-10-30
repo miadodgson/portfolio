@@ -1,6 +1,7 @@
 .container {
 	display: flex;
 	flex-direction: column;
+<<<<<<< HEAD
 	gap: 20px;
 	width: 100%;
 	height: 100vh;
@@ -84,3 +85,77 @@
 .rotatingTextContainer {
 	margin: 25px 0;
 }
+=======
+	align-items: center;
+	justify-content: space-evenly;  
+	width: 100vw;
+	min-height: 100vh;
+	position: relative;
+	overflow: visible;  
+	padding-top: 0px; 
+	box-sizing: border-box;
+}
+
+.lanyardWrapper {
+	position: relative;
+	margin-top: -60px;
+	top: 0;
+	left: 0;
+	z-index: 1; 
+	width: 100vw;
+	height: 50vh;
+	overflow: visible;
+	pointer-events: none; 
+  }
+  
+  
+.titleBox {
+	flex: 0;
+	padding: 15px;
+	text-align: center;
+	border-radius: 8px;
+	position: relative;
+}
+
+  
+.gradientText {
+	font-size: clamp(3rem, 5vw, 4rem);
+	line-height: 1.2;
+	font-weight: 400;
+	max-width: 20ch;
+	margin: 0 auto;
+}
+
+.splitTextTitle {
+	font-size: clamp(2.5rem, 5vw, 3.5rem);
+	line-height: 1.2;
+	font-weight: 400;
+	max-width: 20ch;
+	margin: 0 auto;
+  }
+
+.rotatingTextContainer {
+	font-size: clamp(2rem, 5vw, 4rem);
+	line-height: 1.2;
+	font-weight: 600;
+	max-width: 25ch;
+	margin: 0 auto;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	margin-top: 10px;
+}
+
+/* Desktop Size */
+@media only screen and (min-width: 600px) {
+    .container {
+        margin: 0 auto;
+    } 
+}
+
+@media (max-width: 768px) {
+	.lanyardWrapper {
+	  /* Adjusted height for smaller screens to improve layout */
+	  height: 45vh;
+	}
+}
+>>>>>>> dev

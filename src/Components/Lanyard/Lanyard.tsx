@@ -19,9 +19,8 @@ import {
 } from "@react-three/rapier";
 import { MeshLineGeometry, MeshLineMaterial } from "meshline";
 import * as THREE from "three";
-import cardGLB from "../../Assets/Images/card.glb";
-import lanyard from "../../Assets/Images/Lanyard.png";
-import "./Lanyard.css";
+import lanyard from "../../Assets/Images/LanyardBand.png";
+import styles from "./Lanyard.module.css";
 
 extend({ MeshLineGeometry, MeshLineMaterial });
 
@@ -35,14 +34,15 @@ interface LanyardProps {
 export default function Lanyard({
   position = [0, 0, 30],
   gravity = [0, -40, 0],
-  fov = 25,
+  fov = 20,
   transparent = true,
 }: LanyardProps) {
   const [dragged, setDragged] = useState<false | THREE.Vector3>(false);
 
   return (
-    <div className="lanyard-wrapper">
-      <div className="canvas-container">
+    <div   className={`${styles.lanyardWrapper} ${dragged ? styles.dragging : ""}`}
+>
+      <div className={styles.canvasContainer}>
         <Canvas
           camera={{ position, fov }}
           style={{ width: '100%', height: '100%' }}
@@ -80,7 +80,7 @@ export default function Lanyard({
             <Lightformer
               intensity={10}
               color="white"
-              position={[-10, 0, 14]}
+              position={[-16, 0, 14]}
               rotation={[0, Math.PI / 2, Math.PI / 3]}
               scale={[100, 10, 1]}
             />
@@ -119,7 +119,9 @@ function Band({ dragged, setDragged, maxSpeed = 50, minSpeed = 0 }: BandProps) {
     linearDamping: 4,
   };
 
-  const { nodes, materials } = useGLTF(cardGLB) as any;
+  useGLTF.preload('/card.glb');
+
+  const { nodes, materials } = useGLTF(`${process.env.PUBLIC_URL}/card.glb`) as any;
   const texture = useTexture(lanyard);
   const [curve] = useState(
     () =>
@@ -192,6 +194,7 @@ function Band({ dragged, setDragged, maxSpeed = 50, minSpeed = 0 }: BandProps) {
           delta * (minSpeed + clampedDistance * (maxSpeed - minSpeed))
         );
       });
+      
       curve.points[0].copy(j3.current.translation());
       curve.points[1].copy(j2.current.lerped);
       curve.points[2].copy(j1.current.lerped);
@@ -204,11 +207,13 @@ function Band({ dragged, setDragged, maxSpeed = 50, minSpeed = 0 }: BandProps) {
   });
 
   curve.curveType = "chordal";
-  texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+  if (texture instanceof THREE.Texture) {
+    texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+  }
 
   return (
     <>
-      <group position={[0, 11, 0]}>
+      <group position={[0, 9.5, 0]}>
         <RigidBody
           ref={fixed}
           {...segmentProps}
@@ -235,8 +240,9 @@ function Band({ dragged, setDragged, maxSpeed = 50, minSpeed = 0 }: BandProps) {
         >
           <CuboidCollider args={[0.8, 1.125, 0.01]} />
           <group
-            scale={5.25}
-            position={[0, -5, -0.05]}
+            scale={6.25}
+            /* Lanyard Size */
+            position={[0, -6.25, -0.05]}
             onPointerOver={() => hover(true)}
             onPointerOut={() => hover(false)}
             onPointerUp={(e: any) => {

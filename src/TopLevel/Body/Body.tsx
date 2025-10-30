@@ -5,6 +5,7 @@ import LandingPage from '../../Routes/LandingPage/LandingPage'
 import Education from '../../Routes/Education/Education'
 import Experience from '../../Routes/Experience/Experience'
 import Publications from '../../Routes/Publications/Publications'
+import CV from '../../Routes/CV/CV'
 import Resources from '../../Routes/Resources/Resources'
 
 
@@ -13,10 +14,12 @@ const Body = () => {
         <div className={styles.bodyContentContainer}> 
             <Routes>
                 <Route path='/' element={<LandingPage />}/>
-				<Route path='/Education' element={<Education />}/>
-				<Route path='/Experience' element={<Experience />}/>
-				<Route path='/Publications' element={<Publications />}/>
-				<Route path='/Resources' element={<Resources />}/>
+                {/* <Route path='/Education' element={<Education />}/>
+                <Route path='/Experience' element={<Experience />}/>
+                */}
+                <Route path='/Publications' element={<Publications />}/>
+                <Route path='/CV' element={<CV />}/>
+                <Route path='/Resources' element={<Resources />}/> 
                 <Route path='/Contact' element={<Contact />}/>
             </Routes>
         </div>
