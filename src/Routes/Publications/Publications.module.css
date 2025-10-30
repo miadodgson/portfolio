@@ -13,13 +13,36 @@
   overflow: visible;
 }
 
-.container h1 {
+.h3 {
+  color:white;
+  font-family: sans-serif;
+  position: fixed;
+  left:130px;
+	font-weight: 100;
+	margin-bottom: 8px;
+  padding: 0;
+  margin-top: 16px;
+  font-size: 40px;
+}
+
+h1 {
   font-size: 35px;
 	color:white;
 	font-family: sans-serif;
 	font-weight: 100;
 	margin-bottom: 8px;
   padding: 0;
+  margin-top: 40px;
+}
+
+.h2 {
+  font-size: 35px;
+	color:white;
+	font-family: sans-serif;
+	font-weight: 100;
+	margin-bottom: 8px;
+  padding: 0;
+  margin-top: 90px;
 }
 
 .container p {
@@ -39,3 +62,23 @@
 	height: 400px;
 	padding: 10px;
 }
+
+.read {
+  height: 80px;
+  margin-top: 0px;
+}
+
+.download {
+  margin-top: 30px;
+  justify-content: center;
+}
+/*
+.buttonContainer {
+  display: flex;     
+  gap: 16px;            
+  justify-content: center; 
+  align-items: center;    
+  margin: 2rem;   
+}
+*/
+
