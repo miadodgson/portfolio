@@ -79,7 +79,7 @@ a {
   justify-content: center;
   transition: filter 300ms;
   /* background: #11195c; */
-  background:rgb(48, 45, 45);
+  background:rgb(65, 35, 216);
 }
 
 .iconButton:hover {
@@ -91,11 +91,11 @@ a {
   top: 63px;
   width: flex;
   transform: translateX(-45%);
-  background-color: #010a25; 
+  background-color: #0b0041; 
   /* background:rgb(15, 14, 14); */
-  opacity: 92%;
+  opacity: 95%;
   border: var(--border);
-  border-color: rgb(90, 89, 90);
+  border-color: rgb(117, 109, 178);
   border-radius: var(--border-radius);
   padding: 1rem;
   overflow: hidden;
@@ -130,7 +130,7 @@ a {
 }
 
 .menuItem:hover {
-  background-color: #0935b8; 
+  background-color: #3c03ce; 
   /* background:rgb(214, 127, 233); */
 }
 
