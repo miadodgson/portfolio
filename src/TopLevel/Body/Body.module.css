@@ -1,41 +1,23 @@
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-}
-
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    margin: 0;
-    text-align: center;
-    width: 100%;
-    min-height: 100vh; 
-    box-sizing: border-box;
-    overflow: auto;
+    min-height: 100vh;
+    width: 100vw;
+
     background-image: url('../../Assets/Images/BackgroundImage.png');
-    /* background-image: url('../../Assets/Images/BackgroundGradient.jpg'); */
-    background-size: cover; 
-    background-attachment: fixed; 
-    background-position: center; 
-    background-repeat: no-repeat; 
+    background-size: cover;         
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-attachment: fixed;   
 }
 
-
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  overflow: visible; 
-  justify-content: flex-start;
-  align-items: center;
-}
-
-/* Media query for mobile devices */
+/* Mobile adjustments */
 @media (max-width: 768px) {
     body {
-		background-position: 80% 100%; 
-        background-size: cover;
-	}
+        background-position: cen center; 
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background-position: top center; 
+    }
 }
