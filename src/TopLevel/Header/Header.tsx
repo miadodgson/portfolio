@@ -10,9 +10,9 @@ const Header = () => {
 		<div>
 			<div className={styles.header}>
 				<div className={styles.loader} onClick={() => navigate('/')} >
-					<img src={Flask} className={styles.loader} alt="Flask"/>
+					<img src={Flask} className={styles.loader} alt="Flask" />
 				</div>				
-				<Nav/>
+				<Nav />
 			</div>
 		</div>
 	)
