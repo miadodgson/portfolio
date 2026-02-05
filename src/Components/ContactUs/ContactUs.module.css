@@ -7,8 +7,7 @@ border: 1px solid #396afc;
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-height:40ch;
-  	max-width: 38ch;
+  max-width: 38ch;
 }
 
 .label {
@@ -74,14 +73,12 @@ border: 1px solid #396afc;
 /* Desktop Size */
 @media only screen and (min-width: 600px) {
     .contactForm {
-        height: 80vh;
         width: 60vw;
     } 
 }
 
 @media (max-width: 768px) {
 	.contactForm {
-	  height: 80vh;
       width: 60vw;
 	}
 }
